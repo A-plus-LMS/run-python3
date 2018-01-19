@@ -13,6 +13,8 @@ RUN apt-get update -qqy && apt-get install -qqy --no-install-recommends \
     python3 \
     python3-dev \
     python3-pip \
+    python3-certifi \
+    python3-virtualenv \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
   && pip3 install --no-cache-dir --disable-pip-version-check \
     setuptools \
