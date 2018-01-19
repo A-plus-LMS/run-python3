@@ -1,9 +1,8 @@
 FROM debian:stretch-slim
 
 ENV LANG=C.UTF-8
-ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update -qqy && apt-get install -qqy --no-install-recommends \
+RUN apt-get update -qqy && DEBIAN_FRONTEND=noninteractive apt-get install -qqy --no-install-recommends \
     -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
     apt-utils \
     ca-certificates \
