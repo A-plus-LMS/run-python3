@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 
 ENV LANG=C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
